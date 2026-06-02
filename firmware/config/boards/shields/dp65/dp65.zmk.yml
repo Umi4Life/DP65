@@ -1,0 +1,14 @@
+file_format: "1"
+id: dp65
+name: DP65
+type: shield
+url: https://github.com/Umi4Life/DP65
+requires: [pro_micro]
+exposes: [nice_view_header]
+features:
+  - keys
+  - display
+  - encoder
+siblings:
+  - dp65_left
+  - dp65_right

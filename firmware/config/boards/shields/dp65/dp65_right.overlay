@@ -1,0 +1,21 @@
+/* Copyright (c) 2026 Umi4Life
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "dp65.dtsi"
+
+&kscan0 {
+    /*
+     * TODO: confirm these pro_micro logical pins from the final KiCad netlist.
+     * They are scaffold assignments for R_COL0..R_COL6.
+     */
+    col-gpios
+        = <&pro_micro 21 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 20 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 19 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 18 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 15 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 14 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 16 GPIO_ACTIVE_HIGH>
+        ;
+};
