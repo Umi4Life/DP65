@@ -1,6 +1,6 @@
 # DP65 ZMK firmware scaffold
 
-This directory contains a ZMK user-config style firmware scaffold for DP65.
+This repository contains a ZMK user-config style firmware scaffold for DP65. The active ZMK config lives at the repository root (`config/` and `build.yaml`) because ZMK's reusable GitHub Actions workflow expects `west init` and `west update` to run from the repo root.
 
 ## Hardware target
 
@@ -15,8 +15,8 @@ No. For ZMK keyboard firmware, the clean approach is **not** to add ZMK as a git
 
 This scaffold uses the standard ZMK user-config pattern:
 
-- `firmware/config/west.yml` tells `west` to clone ZMK and its dependencies outside this repo during setup/build.
-- `firmware/build.yaml` describes the GitHub Actions build matrix.
+- `config/west.yml` tells `west` to clone ZMK and its dependencies outside this repo during setup/build.
+- `build.yaml` describes the GitHub Actions build matrix.
 - `.github/workflows/zmk-build.yml` calls ZMK's reusable user-config build workflow.
 
 That keeps this repository focused on DP65 hardware and DP65-specific firmware files.
@@ -24,17 +24,19 @@ That keeps this repository focused on DP65 hardware and DP65-specific firmware f
 ## Current firmware files
 
 ```text
-firmware/
-├── build.yaml
-└── config/
-    ├── west.yml
-    └── boards/shields/dp65/
-        ├── dp65.conf
-        ├── dp65.dtsi
-        ├── dp65.keymap
-        ├── dp65.zmk.yml
-        ├── dp65_left.overlay
-        └── dp65_right.overlay
+build.yaml
+config/
+├── west.yml
+├── dp65.keymap
+└── boards/shields/dp65/
+    ├── Kconfig.defconfig
+    ├── Kconfig.shield
+    ├── dp65.conf
+    ├── dp65.dtsi
+    ├── dp65.keymap
+    ├── dp65.zmk.yml
+    ├── dp65_left.overlay
+    └── dp65_right.overlay
 ```
 
 ## nice!view support
@@ -82,7 +84,7 @@ From the repository root:
 python3 -m venv .venv-zmk
 . .venv-zmk/bin/activate
 pip install west
-west init -l firmware/config
+west init -l config
 west update
 west zephyr-export
 pip install -r zephyr/scripts/requirements.txt
@@ -93,7 +95,7 @@ Build the left half:
 ```bash
 west build -s zmk/app -d build/dp65_left -b nice_nano_v2 -- \
   -DSHIELD="dp65_left nice_view_adapter nice_view" \
-  -DZMK_CONFIG="$PWD/firmware/config"
+  -DZMK_CONFIG="$PWD/config"
 ```
 
 Build the right half:
@@ -101,7 +103,7 @@ Build the right half:
 ```bash
 west build -s zmk/app -d build/dp65_right -b nice_nano_v2 -- \
   -DSHIELD="dp65_right nice_view_adapter nice_view" \
-  -DZMK_CONFIG="$PWD/firmware/config"
+  -DZMK_CONFIG="$PWD/config"
 ```
 
 ## Flashing
