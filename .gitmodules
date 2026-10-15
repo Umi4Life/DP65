@@ -10,3 +10,6 @@
 [submodule "DP65_PCB/nice_view_pcb"]
 	path = DP65_PCB/nice_view_pcb
 	url = https://github.com/HookyQR/nice_view_pcb.git
+[submodule "firmware/dp65-zmk-config"]
+	path = firmware/dp65-zmk-config
+	url = https://github.com/Umi4Life/dp65-zmk-config
