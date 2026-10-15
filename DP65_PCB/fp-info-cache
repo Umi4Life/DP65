@@ -1,4 +1,11 @@
-28206530840777932
+28217205742027015
+AS5600
+SOIC8
+<b>SOIC-8</b> CASE 751-07<p>Source: http://www.onsemi.com/pub/Collateral/MC34164-D.PDF<p><b>D (R-PDSO-G8)</b>PLATIC SMALL-OUTLINE PACKAGE<br>Source: http://focus.ti.com/lit/ds/symlink/tlc27l2.pdf
+
+0
+8
+8
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -80346,6 +80353,13 @@ Plate_MX_1.5u
 0
 0
 PCM_marbastlib-xp-plate-mx
+Plate_MX_1.5u-no-cut
+
+
+0
+0
+0
+PCM_marbastlib-xp-plate-mx
 Plate_MX_1.25u
 
 
@@ -80353,7 +80367,21 @@ Plate_MX_1.25u
 0
 0
 PCM_marbastlib-xp-plate-mx
+Plate_MX_1.25u-no-cut
+
+
+0
+0
+0
+PCM_marbastlib-xp-plate-mx
 Plate_MX_1.75u
+
+
+0
+0
+0
+PCM_marbastlib-xp-plate-mx
+Plate_MX_1.75u-no-cut
 
 
 0
@@ -80381,7 +80409,21 @@ Plate_MX_1u
 0
 0
 PCM_marbastlib-xp-plate-mx
+Plate_MX_1u-no-cut
+
+
+0
+0
+0
+PCM_marbastlib-xp-plate-mx
 Plate_MX_2.25u
+
+
+0
+0
+0
+PCM_marbastlib-xp-plate-mx
+Plate_MX_2.25u-no-cut
 
 
 0

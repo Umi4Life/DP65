@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "nice_view_pcb")(type "KiCad")(uri "${KIPRJMOD}/nice_view_pcb")(options "")(descr ""))
+  (lib (name "AS5600")(type "KiCad")(uri "${KIPRJMOD}/AS5600")(options "")(descr ""))
+)
